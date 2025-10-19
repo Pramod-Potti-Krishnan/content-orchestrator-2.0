@@ -1,0 +1,33 @@
+{
+  "strawman": {
+    "main_title": "AI in Healthcare - Test",
+    "overall_theme": "professional",
+    "target_audience": "healthcare executives",
+    "slides": [
+      {
+        "slide_id": "slide_000",
+        "slide_number": 0,
+        "slide_type": "title_slide",
+        "title": "AI in Healthcare",
+        "slide_title": "AI in Healthcare",
+        "narrative": "Introduction to AI applications in modern healthcare",
+        "content_guidance": "Main title with subtitle about AI transformation",
+        "key_points": ["AI", "Healthcare", "Innovation"],
+        "analytics_needed": false,
+        "visuals_needed": false
+      },
+      {
+        "slide_id": "slide_001",
+        "slide_number": 1,
+        "slide_type": "content_heavy",
+        "title": "Key Benefits",
+        "slide_title": "Key Benefits of AI",
+        "narrative": "AI provides significant advantages in healthcare delivery",
+        "content_guidance": "List 3-4 key benefits with brief explanations",
+        "key_points": ["Faster diagnosis", "Personalized treatment", "Reduced costs"],
+        "analytics_needed": false,
+        "visuals_needed": true
+      }
+    ]
+  }
+}

@@ -35,10 +35,10 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from core.orchestrator import ContentOrchestratorV2
-from clients.mock_text_client import MockTextClient
-from clients.mock_chart_client import MockChartClient
-from clients.mock_image_client import MockImageClient
-from clients.mock_diagram_client import MockDiagramClient
+from clients.real_text_client import RealTextClient  # Updated to use production service
+from clients.real_image_client import RealImageClient  # Updated to use production service
+from clients.real_diagram_client import RealDiagramClient  # Updated to use production service
+from clients.real_chart_client import RealChartClient  # Updated to use production service
 
 # Import models
 from models.agents import PresentationStrawman, Slide
@@ -62,12 +62,12 @@ async def lifespan(app: FastAPI):
     logger.info("Starting Content Orchestrator v2.0 API")
     global orchestrator
 
-    # Initialize API clients (using mock clients for now)
-    # Replace with real clients in production
-    text_client = MockTextClient(delay_ms=int(os.getenv("TEXT_API_DELAY_MS", "100")))
-    chart_client = MockChartClient(delay_ms=int(os.getenv("CHART_API_DELAY_MS", "150")))
-    image_client = MockImageClient(delay_ms=int(os.getenv("IMAGE_API_DELAY_MS", "200")))
-    diagram_client = MockDiagramClient(delay_ms=int(os.getenv("DIAGRAM_API_DELAY_MS", "150")))
+    # Initialize API clients
+    # All services now use production Railway deployment
+    text_client = RealTextClient()  # Uses TEXT_SERVICE_URL from .env
+    image_client = RealImageClient()  # Uses IMAGE_SERVICE_URL from .env
+    diagram_client = RealDiagramClient()  # Uses DIAGRAM_SERVICE_URL from .env
+    chart_client = RealChartClient()  # Uses CHART_SERVICE_URL from .env
 
     # Create orchestrator
     orchestrator = ContentOrchestratorV2(
