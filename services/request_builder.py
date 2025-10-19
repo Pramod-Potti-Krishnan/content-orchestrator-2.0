@@ -12,7 +12,7 @@ Performance: <1ms per request
 
 import logging
 from typing import Dict, Any, List, Optional
-from ..utils.guidance_parser import parse_guidance
+from utils.guidance_parser import parse_guidance
 
 logger = logging.getLogger(__name__)
 

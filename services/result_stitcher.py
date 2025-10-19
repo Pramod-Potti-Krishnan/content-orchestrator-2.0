@@ -12,14 +12,14 @@ Performance: <1ms per slide
 
 import logging
 from typing import Dict, List, Any, Optional
-from ..models.director_models import (
+from models.director_models import (
     EnrichedSlide,
     GeneratedText,
     GeneratedChart,
     GeneratedImage,
     GeneratedDiagram
 )
-from ..models.layout_models import LayoutAssignment, ValidationStatus
+from models.layout_models import LayoutAssignment, ValidationStatus
 
 logger = logging.getLogger(__name__)
 

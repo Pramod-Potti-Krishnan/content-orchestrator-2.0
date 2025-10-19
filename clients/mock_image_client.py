@@ -11,7 +11,7 @@ import asyncio
 import logging
 from typing import Dict, Any
 
-from ..models.director_models import GeneratedImage
+from models.director_models import GeneratedImage
 
 logger = logging.getLogger(__name__)
 

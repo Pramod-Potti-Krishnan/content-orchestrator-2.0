@@ -12,10 +12,11 @@ Performance: <1ms per slide
 
 import logging
 from typing import Dict, List, Any
-from ..models.layout_models import (
+from models.layout_models import (
     LayoutConstraints,
     ValidationStatus,
-    ValidationViolation
+    ValidationViolation,
+    LayoutAssignment
 )
 
 logger = logging.getLogger(__name__)

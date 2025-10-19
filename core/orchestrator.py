@@ -29,16 +29,16 @@ import time
 from typing import Optional, Callable, List, Dict, Any
 from datetime import datetime
 
-# Import v2 models (now self-contained in v2/models)
-from ..models.agents import PresentationStrawman, Slide
-from ..models.layout_models import LayoutAssignment, LayoutConstraints, ValidationReport
-from ..models.director_models import EnrichedPresentationStrawman
+# Import v2 models - use absolute imports for production
+from models.agents import PresentationStrawman, Slide
+from models.layout_models import LayoutAssignment, LayoutConstraints, ValidationReport
+from models.director_models import EnrichedPresentationStrawman
 
-# Import v2 services (relative imports)
-from ..services.request_builder import RequestBuilder
-from ..services.api_dispatcher import APIDispatcher
-from ..services.result_stitcher import ResultStitcher
-from ..services.sla_validator import SLAValidator
+# Import v2 services - use absolute imports for production
+from services.request_builder import RequestBuilder
+from services.api_dispatcher import APIDispatcher
+from services.result_stitcher import ResultStitcher
+from services.sla_validator import SLAValidator
 
 logger = logging.getLogger(__name__)
 

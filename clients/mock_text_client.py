@@ -11,7 +11,7 @@ import asyncio
 import logging
 from typing import Dict, Any
 
-from ..models.director_models import GeneratedText
+from models.director_models import GeneratedText
 
 logger = logging.getLogger(__name__)
 

@@ -27,6 +27,13 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Import v2 orchestrator and clients
+# Use absolute imports for production compatibility
+import sys
+from pathlib import Path
+
+# Add current directory to path to allow absolute imports
+sys.path.insert(0, str(Path(__file__).parent))
+
 from core.orchestrator import ContentOrchestratorV2
 from clients.mock_text_client import MockTextClient
 from clients.mock_chart_client import MockChartClient
